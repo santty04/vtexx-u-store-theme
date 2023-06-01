@@ -1,102 +1,62 @@
-# Store Theme VTEX U
+# Minimum Boilerplate Theme
 
-VTEX U Store Theme es un modelo básico de tienda basado en VTEX IO Store Framework, con fines netamente educativos.
+The minimum Boilerplate Theme is basic store front model based on the VTEX IO Store Framework.
 
-Debe usarse solo cuando desee iniciar un nuevo tema de tienda sin ninguna configuración preestablecida.
+It should be used only when you want to start a new store theme without any pre-set configurations, as is the case with [Store Theme](https://github.com/vtex-apps/store-theme). 
 
-Mientras el Store Theme base de vtex da un modelo definitivo, este tema estará disponible para poder crear un esquema desde cero.
+While Store Theme gives developers a ready-to-go default store front structure, the Minimum Boilerplate Theme will enable you to build you store freely from scratch.
 
-## Previsualización
+## Configuration
 
-Screenshot del home del sitio.
-<!-- Por favor incluya un screenshot del home del sitio en el que está trabajando. Ejemplo
-![store-theme-default](https://user-images.githubusercontent.com/1354492/63937047-e8d81c80-ca37-11e9-86fc-61e88847bbfb.png)-->
+### Step 1 -  Basic setup
 
-## Configuración
+Access the VTEX IO [basic setup guide](https://vtex.io/docs/getting-started/build-stores-with-store-framework/1) and follow all the given steps. 
 
-### Paso 1 -  Configuración básica
+By the end of the setup, you should have the VTEX command line interface (Toolbelt) installed along with a developer workspace you can work in.
 
-Ingrese a la [guía básica de configuración](https://vtex.io/docs/getting-started/build-stores-with-store-framework/1) de VTEX IO y siga los pasos. 
+### Step 2 - Cloning the Minimum Boilerplate Theme repository
 
-Al final de la configuración, debería tener instalada la interfaz de línea de comandos de VTEX (Toolbelt) junto con un workspace para desarrolladores en el que pueda trabajar.
+[Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository to your local files to be able to effectively start working on it.
 
-### Paso 2 - Clonación del repositorio de IT Globers Store Theme.
+Then, access the repository's directory using your terminal. 
 
-Use este repositorio como [plantilla](https://github.com/itglobers/itglobers-store-theme-es/generate) para crear un repositorio de forma local para poder comenzar a trabajar de manera efectiva en él
+### Step 3 - Editing the `Manifest.json`
 
-Luego, acceda al directorio del repositorio usando su terminal.
+Once in the repository directory, it is time to edit the Minimum Boilerplate `manifest.json` file. 
 
-### Paso 3 - Editando el archivo `Manifest.json`
-
-
-Una vez en el directorio del repositorio, es hora de editar el archivo `manifest.json` de Store Theme de IT Globers. 
-
-Una vez estemos en el archivo, deberá remplazar los valores de `vendor` y `account`. `vendor` es el nombre de la cuenta en la que estamos trabajando y `account` es lo que desee colocar de nombre para su tema. Por ejemplo:
+Once you are in the file, you must replace the `vendor` and `account` values. `vendor` is the account name you are working on and `account` is anything you want to name your theme. For example:
 
 ```json
 {
-  "vendor": "itglobers",
-  "name": "store-theme",
+  "vendor": "storecomponents",
+  "name": "my-test-theme",
 }
 ```
 
-### Paso 4 -  Instalando las apps requeridas
+### Step 4 -  Installing required apps
 
-Para usar Store Framework y trabajar en el tema de su tienda, es necesario tener  `vtex.store-sitemap` y `vtex.store` instalados.
+In order to use Store Framework and work on your store theme, it is needed to have both `vtex.store-sitemap` and `vtex.store` installed.
 
-Ejecute `vtex list` y compruebe si esas aplicaciones ya están instaladas. 
+Run  `vtex list`  and check whether those apps are already installed. 
 
-Si no es así, ejecute el siguiente comando para instalarlos: `vtex install vtex.store-sitemap vtex.store -f`
+If they aren't, run the following command to install them: `vtex install vtex.store-sitemap vtex.store -f`
 
-### Paso 5 - Desinstalar cualquier tema existente
+### Step 5 -  Uninstalling any existing theme
 
-Al correr `vtex list`, puede verificar si hay algún tema instalado.
+By running `vtex list`,  you can verify if any theme is installed.
 
-Es común tener ya instalado un `vtex.store-theme` cuando inicia el proceso de desarrollo front de la tienda.
+It is common to already have a `vtex.store-theme`  installed when you start the store's front development process. 
 
-Por lo tanto, si lo encuentra en la lista de la aplicación, copie su nombre y utilícelo junto con el comando `vtex uninstall`. Por ejemplo:
+Therefore, if you find it in the app's list, copy its name and use it together with the command `vtex uninstall`. For example:
 
 ```json
 vtex uninstall vtex.store-theme
 ```
 
-### Paso 6 - Ejecute y obtenga una vista previa de su tienda
+### Step 6- Run and preview your store
 
-Entonces ha llegado el momento de cargar todos los cambios que realizó en sus archivos locales a la plataforma. Para eso, use el comando `vtex link`.
+Then time has come to upload all the changes you made in your local files to the platform. For that, use the `vtex link` command. 
 
-Si el proceso se ejecuta sin errores, se mostrará el siguiente mensaje: `App linked successfully`. Luego, ejecute el comando `vtex browse` para abrir una ventana del navegador con su tienda vinculada.
+If the process runs without any errors, the following message will be displayed: `App linked successfully`. Then, run the `vtex browse` command to open a browser window having your linked store in it.
 
-Esto le permitirá ver los cambios aplicados en tiempo real, a través de la cuenta y el espacio de trabajo en el que está trabajando.
-
-## Dependencies
-
-odos los componentes de la tienda que ve en este documento también son de código abierto. Listo para producción, puede encontrar esas aplicaciones en esta organización de GitHub.
-
-Store framework es la base para crear cualquier tienda usando _VTEX IO Web Framework_.
-- [Store](https://github.com/vtex-apps/store/blob/master/README.md)
-
-### Store component dependencies
-- [Header](https://github.com/vtex-apps/store-header/blob/master/docs/README.md)
-- [Footer](https://github.com/vtex-apps/store-footer/blob/master/docs/README.md)
-- [Slider Layout](https://github.com/vtex-apps/slider-layout/blob/master/docs/README.md)
-- [Shelf](https://github.com/vtex-apps/shelf/blob/master/docs/README.md)
-- [Telemarketing](https://github.com/vtex-apps/telemarketing/blob/master/docs/README.md)
-- [Menu](https://github.com/vtex-apps/menu/blob/master/docs/README.md)
-- [Login](https://github.com/vtex-apps/login/blob/master/docs/README.md)
-- [Minicart](https://github.com/vtex-apps/minicart/blob/master/docs/README.md)
-- [Category Menu](https://github.com/vtex-apps/category-menu/blob/master/docs/README.md)
-- [Product Summary](https://github.com/vtex-apps/product-summary/blob/master/docs/README.md)
-- [Breadcrumb](https://github.com/vtex-apps/breadcrumb/blob/master/docs/README.md)
-- [Search Result](https://github.com/vtex-apps/search-result/blob/master/docs/README.md)
-- [Product Details](https://github.com/vtex-apps/product-details/blob/master/docs/README.md)
-- [Store Components](https://github.com/vtex-apps/store-components/blob/master/docs/README.md)
-- [Order Placed](https://github.com/vtex-apps/order-placed/blob/master/docs/README.md) 
-
-### Dependencias Peer store component 
-
-### Dependencias Custom component 
-
-### Desarrollos realizados en el tema:
-
-1. Se prepara la base del tema
-2. Se instala el builder assets para trabajo de imágenes
+This will enable you to see the applied changes in real time, through the account and workspace in which you are working.
