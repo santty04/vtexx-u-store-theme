@@ -1,0 +1,1 @@
+# vtexx-u-store-theme
