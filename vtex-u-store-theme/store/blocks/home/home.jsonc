@@ -5,50 +5,78 @@
       "image#home__image",
       "link#home__link--ancla",
       "link#home__link--boton",
-      "link#home__link--info"
+      "link#home__link--info",
+      "slider-layout#home__slider--children",
+      "list-context.image-list#home__slider--list"
     ]
   },
-  "image#home__image": { 
-        "title": "Imagen de Home",                                  // Título de bloque.
-        "props": {        
-        "src": "assets/img/b2b-commerce-cover-desktop-1.jpg",     // Source de la imágen.
-        "maxWidth": 600,                                          // Ancho máximo de la imágen.
-        "title": "B2B Commerce",                                  // Título que saldrá al hacer hover en la imágen.
-        "blockClass": "home__section--one",                              // Clase personalizada.
-
-        "link": {                                                 // Objeto que determina las características de la imágen.
-            "url": "https://www.google.com/",
-            "newTab": true,
-            "attributeNofollow": true
-        }
-        }
-        
-    },
-    "link#home__link--ancla": {
-      "props": {
-        "href": "/",
-        "label": "Click aquí",
-        "scrollTo": "#footer"
+  "slider-layout#home__slider--children": {
+    "title": "Slider con hijos declarados",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": "home__slider",
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": true
       }
     },
-    "link#home__link--boton": {
-      "props": {
-        "href": "/",
-        "label": "Click aquí",
-        "displayMode": "button"
-      }
-    },
-    "link#home__link--info": {
-      "children": [
-        "rich-text#link__info--text"
-      ],
-      "props": {
-        "href": "/"
-      }
-    },
-    "rich-text#link__info--text": {
-      "props": {
-        "text": "Mi botón con un children y estructura"
-      }
+    "children": [
+      "image#home__slider--one",
+      "image#home__slider--two",
+      "image#home__slider--threee"
+    ]
+  },
+  "image#home__slider--one": {
+    "props": {
+      "src": "assets/img/main-slide-1.jpg"
     }
+  },
+  "image#home__slider--two": {
+    "props": {
+      "src": "assets/img/main-slide-2.jpg"
+    }
+  },
+  "image#home__slider--threee": {
+    "props": {
+      "src": "assets/img/main-slide-3.jpg"
+    }
+  },
+  "list-context.image-list#home__slider--list": {
+    "title": "Lista de imagenes",
+    "children": ["slider-layout#home__slider--list"],
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "image": "assets/img/main-slide-1.jpg",
+          "description": "Slide 1"
+        },
+        {
+          "image": "assets/img/main-slide-2.jpg",
+          "description": "Slide 2"
+        },
+        {
+          "image": "assets/img/main-slide-3.jpg",
+          "description": "Slide 3"
+        }
+      ]
+    }
+  },
+  "slider-layout#home__slider--list": {
+    "title": "Slider con lista",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": "home__slider"
+    }
+  }
 }
