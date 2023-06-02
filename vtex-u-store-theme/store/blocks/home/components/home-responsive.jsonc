@@ -1,0 +1,30 @@
+{
+    "responsive-layout.desktop": {
+        "children": ["rich-text#desktop"]
+      },
+      "responsive-layout.tablet": {
+        "children": ["rich-text#tablet"]
+      },
+      "responsive-layout.phone": {
+        "children": ["rich-text#phone"]
+      },
+    
+      "rich-text#desktop": {
+        "props": {
+          "text": "# This will only show up on desktop.",
+          "blockClass": "title"
+        }
+      },
+      "rich-text#tablet": {
+        "props": {
+          "text": "# This will only show up on tablet.",
+          "blockClass": "title"
+        }
+      },
+      "rich-text#phone": {
+        "props": {
+          "text": "# This will only show up on phone.",
+          "blockClass": "title"
+        }
+      }
+}
