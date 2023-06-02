@@ -13,8 +13,7 @@
       "responsive-layout.desktop",
       "responsive-layout.tablet",
       "responsive-layout.phone",
-      "modal-trigger#example",
-      "modal-trigger#add-to-cart"
+      "modal-trigger#example"
     ]
   },
   "modal-trigger#example": {
