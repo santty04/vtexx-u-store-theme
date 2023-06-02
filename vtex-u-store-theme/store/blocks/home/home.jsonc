@@ -1,82 +1,97 @@
 {
   "store.home": { 
     "blocks": [
+      // "flex-layout.row#home__section--one",
+      // "image#home__image",
+      // "link#home__link--ancla",
+      // "link#home__link--boton",
+      // "link#home__link--info",
+      // "slider-layout#home__slider--children",
+      // "list-context.image-list#home__slider--list"
       "flex-layout.row#home__section--one",
-      "image#home__image",
-      "link#home__link--ancla",
-      "link#home__link--boton",
-      "link#home__link--info",
-      "slider-layout#home__slider--children",
-      "list-context.image-list#home__slider--list"
+      "flex-layout.row#home__section--two"
     ]
   },
-  "slider-layout#home__slider--children": {
-    "title": "Slider con hijos declarados",
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "blockClass": "home__slider",
-      "autoplay": {
-        "timeout": 3000,
-        "stopOnHover": true
-      }
-    },
+  "flex-layout.row#home__section--one": {
+    "title": "Seccion uno",
     "children": [
-      "image#home__slider--one",
-      "image#home__slider--two",
-      "image#home__slider--threee"
-    ]
-  },
-  "image#home__slider--one": {
+      "flex-layout.col#section__one--image",
+      "flex-layout.col#section__one--text"
+    ],
     "props": {
-      "src": "assets/img/main-slide-1.jpg"
+      "blockClass": "home__section--one"
     }
   },
-  "image#home__slider--two": {
+  "flex-layout.col#section__one--image": {
+    "title": "Imagen de sección uno",
+      "children": [
+        "image#home__image"
+      ],
+      "props": {
+        "blockClass": "section__one--image",
+        "colSizing": "auto"
+      }
+  },
+  "flex-layout.col#section__one--text": {
+    "title": "Texto de sección uno",
+    "children": [
+      "rich-text#section__one--title",
+      "rich-text#section__one--paragraph"
+    ],
     "props": {
-      "src": "assets/img/main-slide-2.jpg"
+      "verticalAlign": "middle"
     }
   },
-  "image#home__slider--threee": {
+  "rich-text#section__one--title": {
     "props": {
-      "src": "assets/img/main-slide-3.jpg"
+      "text": "Bienvenidos a VTEX U"
     }
   },
-  "list-context.image-list#home__slider--list": {
-    "title": "Lista de imagenes",
-    "children": ["slider-layout#home__slider--list"],
+  "rich-text#section__one--paragraph": {
     "props": {
-      "preload": true,
-      "images": [
-        {
-          "image": "assets/img/main-slide-1.jpg",
-          "description": "Slide 1"
-        },
-        {
-          "image": "assets/img/main-slide-2.jpg",
-          "description": "Slide 2"
-        },
-        {
-          "image": "assets/img/main-slide-3.jpg",
-          "description": "Slide 3"
-        }
-      ]
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie venenatis nulla eu viverra. Praesent lacinia eu ipsum eget fermentum. Pellentesque commodo pellentesque risus. Aenean tincidunt, turpis quis dapibus venenatis, mauris lectus aliquam lorem, ut posuere elit dolor in tellus."
     }
   },
-  "slider-layout#home__slider--list": {
-    "title": "Slider con lista",
+  "flex-layout.row#home__section--two": {
+    "children": [
+      "flex-layout.col#section__two--item1",
+      "flex-layout.col#section__two--item2",
+      "flex-layout.col#section__two--item3"
+    ],
     "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "blockClass": "home__slider"
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.col#section__two--item1": {
+      "children": [
+        "image#home__slider--one"
+      ],
+      "props": {
+        "width": "25%"
+      }
+  },
+  "flex-layout.col#section__two--item2": {
+      "children": [
+        "rich-text#test",
+        "link#home__link--boton"
+      ],
+      "props": {
+        "blockClass": "section__two--item",
+        "width": "50%"
+      }
+  },
+  "flex-layout.col#section__two--item3": {
+      "children": [
+        "image#home__slider--two",
+        "image#home__slider--threee"
+      ],
+      "props": {
+        "width": "25%"
+      }
+  },
+  "rich-text#test": {
+    "props": {
+      "text": "Este es un texto de prueba"
     }
   }
 }

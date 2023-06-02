@@ -1,3 +1,11 @@
 .flexRowContent--home__section--one{
-    background-color: brown;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.flexColChild--section__one--image {
+    max-width: 600px;
+}
+.flexCol--section__two--item :global(.vtex-store-link-0-x-buttonLink) {
+    background-color: red;
 }
