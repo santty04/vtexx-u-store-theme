@@ -6,33 +6,58 @@
       // "link#home__link--ancla",
       // "link#home__link--boton",
       // "link#home__link--info",
-      // "slider-layout#home__slider--children",
       // "list-context.image-list#home__slider--list"
+      // "flex-layout.col#home__spacer",
+      "slider-layout#home__slider--children",
+      "slider-layout#home__slider--promo",
+      "flex-layout.row#cards__imperdibles",
+
+
       "flex-layout.row#home__section--one",
       "flex-layout.row#home__section--two",
       "responsive-layout.desktop",
       "responsive-layout.tablet",
       "responsive-layout.phone",
-      "modal-trigger#example"
+      "modal-trigger#example",
+      "modal-trigger#home__modal--event"
     ]
   },
-  "modal-trigger#example": {
-    "children": ["rich-text#example", "modal-layout#example"]
-  },
-
-  "rich-text#example": {
+  // "flex-layout.col#home__spacer": {
+  //   "props": {
+  //     "width": "50%"
+  //   },
+  //   "children": [
+  //     "rich-text#spacer"
+  //   ]
+  // },
+  // "rich-text#spacer": {
+  //   "props": {
+  //     "text": "GRATIS Envío desde $99.000*."
+  //   }
+  // },
+  "modal-trigger#home__modal--event": {
+    "children": [
+      "modal-layout#home__modal--event"
+    ],
     "props": {
-      "text": "Click me"
+      "trigger": "event",
+      "customPixelEventName": "pageView"
     }
   },
-
-  "modal-layout#example": {
-    "children": ["rich-text#modal-content"]
+  "modal-layout#home__modal--event": {
+    "children": [
+      "modal-header#home__modal--event",
+      "rich-text#home__modal--event-content"
+    ]
   },
-
-  "rich-text#modal-content": {
+  "rich-text#home__modal--event-content": {
     "props": {
-      "text": "Hello"
+      "text": "Evento de DOM Loaded"
+    }
+  },
+  "modal-header#home__modal--event": {
+    "props": {
+      "showCloseButton": true
     }
   }
 }
