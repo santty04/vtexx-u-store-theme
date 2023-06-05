@@ -1,0 +1,35 @@
+.container--sticky-header {
+    background-color: black;
+}
+.container--sticky-header :global(.vtex-input__suffix) {
+    background-color: blue;
+    color: white;
+}
+.container--sticky-header :global(.vtex-store-components-3-x-searchBarInnerContainer) {
+    width: 450px;
+}
+.container--sticky-header :global(.vtex-input-prefix__group) {
+    border: none;
+    border-radius: 0;
+}
+.container--sticky-header :global(.vtex-store-components-3-x-searchBarIcon) {
+    color: white;
+}
+.container--sticky-header :global(.vtex-rich-text-0-x-paragraph) {
+    margin: 0;
+    margin-left: 30px;
+    font-size: x-small;
+    color: white;
+}
+.container--sticky-header :global(.vtex-rich-text-0-x-paragraph--desktop__header--help){
+    font-size: small;
+    margin-top: 20px;
+}
+.container--sticky-header :global(.vtex-rich-text-0-x-paragraph--desktop__header--seguimiento) {
+    font-size: small;
+    margin-top: 20px;
+}
+.container--sticky-header :global(.vtex-rich-text-0-x-paragraph--header__text--number) {
+    font-size: medium;
+    font-weight: 600;
+}
