@@ -26,16 +26,66 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
+      "flex-layout.col#text",
+      "rich-text#desktop__header--help",
+      "rich-text#desktop__header--seguimiento",
       "minicart.v2"
     ]
   },
+  "rich-text#desktop__header--help": {
+    "props": {
+      "text": "AYUDA",
+      "blockClass": "desktop__header--help",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#desktop__header--seguimiento": {
+    "props": {
+      "text": "SEGUIMIENTO DE PRODUCTO",
+      "blockClass": "desktop__header--seguimiento"
+    }
+  },
   "flex-layout.col#spacer": {
     "props": {
-      "width": "grow"
+      "width": "50%"
+    }
+  },
+  "search-bar" : {
+    "props": {
+      "placeholder": "Buscar productos por nombre, código o categoría..."
+    }
+  },
+  // Parte de venta telefonica
+  "flex-layout.col#text": {
+    "title": "Seccion uno",
+    "children": [
+      "rich-text#header__one--text",
+      "rich-text#header__two--text",
+      "rich-text#header__three--text"
+    ],
+    "props": {
+      "blockClass": "header__section--text",
+      "verticalAlign": "middle"
+    }
+  },
+  "rich-text#header__one--text": {
+    "props": {
+      "text": "VENTA TELEFONICA",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#header__two--text": {
+    "props": {
+      "text": "601 786 8928",
+      "textPosition": "LEFT",
+      "blockClass": "header__text--number"
+    }
+  },
+  "rich-text#header__three--text": {
+    "props": {
+      "text": "LUNES A VIERNES 8 AM A 14:59 HRS",
+      "textPosition": "LEFT"
     }
   },
   "flex-layout.col#logo-desktop": {
@@ -48,7 +98,7 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
+      "url": "assets/img/logo.png",
       "width": "80"
     }
   },
