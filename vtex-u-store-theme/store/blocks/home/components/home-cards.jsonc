@@ -1,0 +1,32 @@
+{
+    "flex-layout.row#cards__imperdibles": {
+        "title": "Cards imperdibles del mes",
+        "children": [
+            "flex-layout.col#card-1"
+        ],
+        "props": {
+            "blockClass": "cards__imperdibles"
+        }
+    },
+    "flex-layout.col#card-1": {
+        "title": "Card 1",
+        "children": [
+            "image#image__card-1"
+            // "rich-text#text__card-1"
+        ]
+    },
+    "image#image__card-1": { 
+        "title": "Imagen de Card 1",                                  // Título de bloque.
+        "props": {        
+        "src": "assets/img/image-card-1.webp",     // Source de la imágen.                                    // Ancho máximo de la imágen.
+        "blockClass": "home__card--one",                             // Clase personalizada.
+
+        "link": {                                                 // Objeto que determina las características de la imágen.
+            "url": "https://www.google.com/",
+            "newTab": true,
+            "attributeNofollow": true
+        }
+        }
+        
+    }
+}
