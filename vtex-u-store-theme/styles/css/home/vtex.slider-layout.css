@@ -1,10 +1,25 @@
 .sliderLayoutContainer--home__slider {
-    max-width: 1200px;
     margin: 0 auto 50px;
 }
 .paginationDotsContainer--home__slider {
-    transform: translateY(30px);
+    transform: translateY(0px);
 }
 .imageElement--home__slider {
     max-height: initial !important;
+}
+.sliderTrack--home__slider {
+    margin-top: 50px;
+}
+.sliderLayoutContainer--home__slider--promo {
+    margin: 0 auto 50px;
+}
+.slideChildrenContainer--home__slider--promo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.sliderArrows--home__slider--promo {
+    background-color: #b2b2b2 !important;
+    height: 60px;
+    color: #f5f5f5;
+    border-radius: 3px;
 }
