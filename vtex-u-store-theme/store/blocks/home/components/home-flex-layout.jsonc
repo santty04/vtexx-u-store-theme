@@ -69,8 +69,7 @@
       },
       "flex-layout.col#section__two--item3": {
           "children": [
-            "image#home__slider--two",
-            "image#home__slider--threee"
+            "image#home__slider--two"
           ],
           "props": {
             "width": "25%"
